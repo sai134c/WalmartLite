@@ -1,1 +1,1 @@
-# WalmartLite
+Это проект walmartLite
