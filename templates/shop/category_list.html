@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link rel="stylesheet" href="../../static/css/category_list.css">
+{% endblock style %}
+
+{% block content %}
+{% load product_tags %}
+<div>
+    <div class = "title">
+        <b>Browse Departments</b>
+    </div>
+    <div class="line">
+
+    </div>
+    <div class="containers">
+      {% for category in categories %}
+      <div class="container">
+        <div class="myDiv">
+          <b class="deal">{{category.name}}</b>
+          <a href="{% url 'category' cid=category.pk %}"><p class="t1">Shop All {{category.name}}</p></a>
+          {% for sub_cat in category|get_chiled_cats %}
+            <a href="{% url 'sub_category' cid=sub_cat.pk %}"><p class="t1">{{sub_cat.name}}</p></a>
+          {% endfor %}
+          
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+</div>
+{% endblock content %}

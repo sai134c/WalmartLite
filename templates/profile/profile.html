@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link rel="stylesheet" href="/static/css/profile.css">
+{% endblock style %}
+
+{% block content %}
+    <aside>
+        <img src="/static/image/walmart.jpg" alt="лого">
+        <span class="logo">Walmart</span>
+    <h3>Hi, Edil</h3>
+        <span>Thanks for being walmart customer</span>
+        <hr>
+        <ul>
+            <a href=""><li><i class="history"></i>Purhace history</li></a>
+            <a href=""><li><i class="savings"></i>My savings</li></a>
+            <a href=""><li><i class="wallet"></i>Wallet</li></a>
+            <a href=""><li><i class="walmart+"></i>Walmart+</li></a>
+        </ul>
+        <h4> My profile </h4>
+        <hr>
+            <ul>
+                <a href=""><li><i class="pets"></i>My pets</li></a>
+                <a href=""><li><i class="vehicle"></i>Vehicles</li></a>
+            </ul>
+        <h5>Manage Account</h5>
+        <hr>
+        <ul>
+            <a href=""><li><i class="person_info"></i>Personal_info</li></a>
+            <a href=""><li><i class="address"></i>Address</li></a>
+        </ul>
+    </aside>
+    <main>
+        <div class="header">
+            <div class="container">
+                <div class="header-menu">
+                    <h2 class="head-welcome">Welcome to your Account</h2>
+                </div>
+                <div class="header-menu_right">
+                    <img src="/static/image/unnamed.png" alt="walmart_cash" width="50" height="20">
+                    <span class="walmart_cash">$0 Walmart Cash</span>
+                </div>
+                <div class="more"><a href="#">How to get more</a></div>
+            </div>
+            <div class="st_block">
+                <img class="st_image" src="/static/image/1-134.png" alt="purchase_image" width="50" height="25">
+                <span><button class="st_button">Purchase history</button></span>
+                <img class="st_high" src="/static/image/больше.jpg" alt="знак больше" width="50" height="25">
+            </div>
+            <div class="nd_block">
+                <img class="st_image" src="/static/image/21-212077_wallet-icon-png-transparent-png.png" alt="wallet-image" width="50" height="25">
+                <span><button class="nd_button">Wallet <span class="nd_text">| Payment methods</span></button></span>
+                <img class="nd_high" src="/static/image/больше.jpg" alt="знак больше" width="50" height="25">
+                <p class="nd_text_bottom">Learn more about <a class="nd_payment_methods" href="">payment methods</a> we accept.</p>
+                <div class="block_contain">
+                    <div class="block1">
+                        <img class="block1_image" src="/static/image/bank%20card.jpg" alt="purchase_image" width="90" height="65">
+                <span><button class="st_block_button">Credit/debit card</button></span>
+                    </div>
+                    <div class="block2">
+                       
+                    </div>
+                    <div class="block3">
+    
+                    </div>
+                    <div class="block4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock content %}

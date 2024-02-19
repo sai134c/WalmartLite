@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="brands">
+    <h2>Бренды</h2>
+    <ul>
+        {% for brand in brands %}
+        <li><a href="{{request.path}}{{brand.pk}}/">{{brand.name}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="products">
+    <h2>Товары</h2>
+    <div class="custom-block">
+        {% for product in products %}
+        <a href="{% url 'product_detail' pid=product.pk %}">
+        <div class="product-block">
+            <img src="{{ product.images.first.image.url }}" alt="{{ product.name }}" />
+            <div class="product-details">
+                <a class="add-to-cart" href="/path/to/add-to-cart/{{ product.id }}">+ADD</a>
+                <p>{{ product.name }}</p>
+                <p>${{ product.calculate_price }}</p>
+            </div>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

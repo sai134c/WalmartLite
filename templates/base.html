@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WalmartLite</title>
+    <link rel="stylesheet" href="/static/css/category_list.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/profile.css">
+    <link rel="stylesheet" href="/static/css/category.css">
+    <link
+      rel="shortcut icon"
+      href="/media/icons/favicon.ico"
+      type="image/x-icon"
+    >
+    <link rel="shortcut icon" href="/media/icons/td2.png" type="image/png" />
+    {% block style %}
+    {% endblock style %}
+  
+</head>
+<body>
+  <div style="height: 89px; background-color:rgb(48, 111, 213);">
+      <div style="height: 89px; width: 30%; background-color:rgb(48, 111, 213); float: left;">
+              <button class="button-head"> Walmart</button>
+              <a href="{% url 'cat_list' %}"><button style="float:left; height: 50px; width: 120px; background-color:rgb(34, 79, 153); border-radius: 20px; border-color: transparent; margin-top: 20px; margin-left: 5px; margin-right: 5px; font-size: medium; color:white;">Departments</button>
+              </button></a>
+              <button class="button-head"> Services</button>
+      </div>
+      <div style="height: 89px; width: 40%; float: left; background-color:rgb(48, 111, 213);">
+        <input class="input-button" type="text">
+        <button class="searche-button"> O</button>
+      </div>
+      <div style="height: 89px; width: 30%; float: left; background-color:rgb(48, 111, 213);">
+        <button class="button-head"> My Items</button>
+        <button class="button-head"> Account</button>
+        <button class="button-head"> Basket</button>
+      </div>
+  </div>
+  <div ></div>
+  <div style="height: 3px; background-color: white;"></div>
+  <div style="height: 39px; width: 55%; background-color:rgb(48, 111, 213); float: left;">
+      <button class="delivery-button">How do you whant your Items? </button>
+    </div>
+    <div style="height: 39px; width: 45%; background-color:rgb(48, 111, 213); float: left;">
+      <button class="deal-button">Deal #0</button>
+      <button class="deal-button">Deal #1</button>
+      <button class="deal-button">Deal #2</button>
+      <button class="deal-button">Deal #3</button>
+      <button class="deal-button">Deal #4</button>
+      <button class="deal-button">Deal #5</button>
+      <button class="deal-button">Deal #6</button>
+    </div>
+<div>
+{%block content%}
+{%endblock%}  
+</div>
+</html>

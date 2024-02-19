@@ -1,0 +1,7 @@
+{% load product_tags %}
+<ul>
+    {% for sub_category in sub_categories %}
+    <li>{{sub_category.name}}</li>
+    {% draw_subcategories obj_id=sub_category.pk %}
+    {% endfor %}
+</ul>

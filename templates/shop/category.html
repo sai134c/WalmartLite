@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+    {% block content %}
+    {% load product_tags %}
+    <div class="products">
+        <div class="custom-block">
+        <div class="main-block">
+            <p>Продам гараж +75616165165</p>
+        </div>
+        </div>
+        <p class="fresh-menu" style="margin-left: 0%">
+        A fresh menu for less
+        </p>
+        <div class="custom-block">
+        <div class="secondary-block">
+            <div class="small-block" onclick="location.href='/path/to/page1';">
+            <img src="../media/phototovarov/1.png" alt="Image 1" />
+            <p>Lean proteins</p>
+            <p>
+                Save on high-quality meat & seafood to mix into your dishes.
+            </p>
+            <a class="shop-now" href="/path/to/page1">Shop Now</a>
+            </div>
+            <div class="small-block" onclick="location.href='/path/to/page2';">
+            <img src="../media/phototovarov/2.png" alt="Image 2" />
+            <p>Low-carb sides</p>
+            <p>Crush your new year's goals with easy sides for less</p>
+            <a class="shop-now" href="/path/to/page2">Shop Now</a>
+            </div>
+            <div class="small-block" onclick="location.href='/path/to/page3';">
+            <img src="../media/phototovarov/3.png" alt="Image 3" />
+            <p>Feel-good frozen finds</p>
+            <p>Filling meals that can be ready in minutes—yes, please.</p>
+            <a class="shop-now" href="/path/to/page3">Shop Now</a>
+            </div>
+        </div>
+        </div>
+        <div class="category-block">
+            <div class="categories">
+                <p class="fresh-menu" style="margin-left: 0%; color: black;">Categories</p>
+                {% draw_subcategories obj_id=cid %}
+                <!-- <div class="category" onclick="showSubCategories('Dietary & Lifestyle Shop')">
+                        <a href="#">Dietary & Lifestyle Shop</a>
+                        <div id="Dietary & Lifestyle ShopSubCategories" class="sub-category" style="display: none">
+                            <a href="#">Dietary & Lifestyle Shop</a>
+                        </div>
+                </div> -->
+            </div>
+            <div class="custom-block">
+            {% for category in categories %}
+                <p>{{category.name}}</p>
+                {% for product in products|category_filter:category.pk %}
+                <a href="{% url 'product_detail' pid=product.pk %}">
+                    <div class="product-block">
+                        <img src="{{ product.images.first.image.url }}" alt="{{ product.name }}" />
+                        <div class="product-details">
+                            <a class="add-to-cart" href="/path/to/add-to-cart/{{ product.id }}">+ADD</a>
+                            <p>{{ product.name }}</p>
+                            <p>${{ product.calculate_price }}</p>
+                        </div>
+                    </div>
+                    </a>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="category-block">
+            <div class="categories">
+                <p class="fresh-menu" style="margin-left: 0%">Category</p>
+                {% for category in categories %}
+                    <div class="category" onclick="showSubCategories('{{ category.name }}')">
+                        <a href="{% url 'sub_category' cid=category.pk %}">{{ category.name }}</a>
+                        <div id="{{ category.name|slugify }}SubCategories" class="sub-category" style="display: none">
+                            {% for subcategory in category.get_descendants %}
+                                <a href="#">{{ subcategory.name }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>        
+          {% comment %} <div class="custom-block">
+            {% for cat_id in categories %}
+                <p>{{cat_id.name}}</p>
+                {% for product in products|category_filter:cat_id.pk %}
+                <div class="product-block" onclick="location.href='/path/to/new-product1';">
+                  <img src="{{ product.images.first.image.url }}" alt="{{ product.name }}" />
+                    <div class="product-details">
+                    <a class="add-to-cart" href="/path/to/add-to-cart/new-product1">+ADD</a>
+                    <p>{{product.name}}</p>
+                    <p>{{product.price}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %} {% endcomment %}
+        </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript для скрытия/показа подкатегорий
+        function showSubCategories(category) {
+        var subCategories = document.getElementById(category + "SubCategories");
+        if (subCategories.style.display === "none") {
+            subCategories.style.display = "block";
+        } else {
+            subCategories.style.display = "none";
+        }
+        }
+    </script>
+    {% endblock content %}

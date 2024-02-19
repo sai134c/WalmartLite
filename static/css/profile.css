@@ -1,0 +1,192 @@
+div{
+    display: block;
+}
+p{
+    font-family: "Times New Roman",Arial,sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+aside{
+    float: left;
+    background: whitesmoke;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    border-right: 2px solid black;
+}
+aside img{
+    width: 100px;
+    float: left;
+}
+aside .logo{
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+
+}
+aside h3,h4,h5{
+    margin-top: 50px;
+    font-size: 20px;
+}
+aside ul {list-style: none}
+aside ul li{
+    color: black;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease;
+}
+aside ul li:hover, aside ul a:hover{
+    color: red;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+aside ul a{
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 35px;
+    top: 120px;
+}
+.header-menu_right{
+    position: relative;
+    margin-left: 150px;
+}
+.walmart_cash{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #002d58;
+}
+.more{
+    position: relative;
+    top: 5px;
+    right: 158px;
+}
+.more a{
+    color: black ;
+}
+.st_block{
+    position: relative;
+    margin-top: 200px;
+    left: 40px;
+    display: inline-block;
+    padding: 24px 16px;
+    background: #f2f8fd;
+    border-radius: 15px;
+    border: 1px solid grey;
+    width: 950px;
+}
+.st_image{
+    position: relative;
+    top: 5px;
+    background: #f2f8fd;
+}
+.st_high{
+    position: relative;
+    background: #f2f8fd;
+    top:5px;
+    left: 680px;
+}
+.st_button{
+    cursor: pointer;
+    appearance: none;
+    background: #f2f8fd;
+    color: #000000;
+    border-radius: 1px;
+    border: 0;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.nd_block{
+    position: relative;
+    margin-top: 20px;
+    left: 40px;
+    display: inline-block;
+    padding: 24px 16px;
+    background: #f2f8fd;
+    border-radius: 15px;
+    border: 1px solid grey;
+    width: 950px;
+    height: 200px;
+}
+.nd_button{
+    cursor: pointer;
+    appearance: none;
+    background: #f2f8fd;
+    color: #000000;
+    border-radius: 1px;
+    border: 0;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.nd_text{
+    font-weight: normal;
+}
+.nd_text_bottom{
+    position: relative;
+    top: 11px;
+}
+.nd_high{
+    position: relative;
+    background: #f2f8fd;
+    top: 7px;
+    left: 613px;
+}
+.nd_payment_methods{
+    font-size: 13px;
+    color: black;
+}
+.block_contain{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 20px;
+    width: 195px;
+    height: 120px;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 15px;
+
+}
+.st_block_button{
+    position: relative;
+    left: 23px;
+    cursor: pointer;
+    appearance: none;
+    background: #f2f8fd;
+    color: #000000;
+    border-radius: 1px;
+    border: 0;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 300;
+}
+.block1_image{
+    position: relative;
+    left: 50px;
+}
+.block2_image{
+    position: relative;
+    left: 150px;
+}
+.nd_block_button{
+    position: relative;
+    left: 100px;
+    cursor: pointer;
+    appearance: none;
+    background: #f2f8fd;
+    color: #000000;
+    border-radius: 1px;
+    border: 0;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 300;
+}

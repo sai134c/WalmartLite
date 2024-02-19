@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+  }
+
+  header {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(30, 144, 255);
+    height: 90px;
+    display: flex;
+    align-items: center;
+  }
+
+  header h1 {
+    margin-left: 20px;
+    color: white;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+  main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(55, 59, 58);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-block {
+    width: 80%;
+    margin: 20px 0;
+    display: flex;
+  }
+
+  .categories {
+    width: 30%;
+  }
+
+  .category {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .sub-category {
+    margin-left: 20px;
+    display: none;
+  }
+
+  .products {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .custom-block {
+    width: 100%;
+    margin: 20px 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .custom-block .main-block,
+  .custom-block .secondary-block,
+  .custom-block .product-block {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .custom-block .main-block p,
+  .custom-block .secondary-block p,
+  .custom-block .product-block p {
+    font-size: 24px;
+    color: black;
+    margin: 0;
+  }
+
+  .custom-block .small-block {
+    width: calc(33.33% - 10px);
+    margin: 0 5px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .custom-block .small-block img,
+  .custom-block .product-block img {
+      width: 1%;  /* Ширина занимает 100% ширины родительского блока */
+      height: 1%; /* Высота занимает 100% высоты родительского блока */
+      object-fit: cover; /* Обрезка изображения, чтобы сохранить пропорции и заполнить блок полностью */
+  }
+  
+
+
+  .custom-block .small-block p,
+  .custom-block .product-block p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .custom-block .shop-now,
+  .custom-block .add-to-cart {
+    padding: 10px;
+    background-color: #3063c2;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .custom-block:hover,
+  .custom-block .small-block:hover,
+  .custom-block .product-block:hover {
+    background-color: #e0e0e0;
+  }
+
+  .fresh-menu {
+    text-align: left;
+    margin-left: 10%;
+    font-size: 24px;
+    color: white;
+  }
+
+  /* Новый стиль для кастомных блоков товаров */
+  .custom-block .product-block {
+    position: relative;
+  }
+
+  .custom-block .product-block .product-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .custom-block .product-block .product-details a {
+    display: block;
+    background-color: #3063c2;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }

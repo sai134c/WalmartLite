@@ -1,0 +1,54 @@
+.button-head  {
+  float:left; 
+  height: 50px; 
+  width: 120px; 
+  background-color:rgb(34, 79, 153); 
+  border-radius: 20px; 
+  border-color: transparent; 
+  margin-top: 20px; 
+  margin-left: 10px; 
+  margin-right: 5px; 
+  font-size: medium; 
+  color:white;
+}
+.input-button  {
+  float:left; 
+  height: 50px; 
+  width: 80%; 
+  background-color:rgb(255, 255, 255); 
+  border-radius: 20px; 
+  border-color: transparent; 
+  margin-top: 20px; 
+  margin-left: 15px;  
+  font-size: medium; 
+  color:black;
+}
+.searche-button  {
+  float:left; 
+  height: 50px; 
+  width: 10%; 
+  background-color:rgb(30, 69, 132); 
+  border-radius: 100px; 
+  border-color: transparent; 
+  margin-top: 20px; 
+  margin-left: 15px;  
+}
+.delivery-button  {
+float:left; 
+height: 39px; 
+width: 500px; 
+background-color:rgb(48, 111, 213); 
+margin-left: 10px; 
+border-color: transparent; 
+color:white; 
+font-size: medium;
+}
+.deal-button  {
+background-color: rgb(48, 111, 213); 
+margin-left: 10px; 
+margin-top: 7px; 
+border-color: transparent; 
+color: white; 
+font-size: medium;
+float:left;
+}
